@@ -1,10 +1,10 @@
 (function () {
-  function FormController() {
+  function FormController () {
     var vm = this;
     vm.tasks = [];
-    vm.addTask = function(newInput) {
-      vm.tasks.push(newInput);
-      vm.newInput = "";
+    vm.addTask = function(index) {
+      vm.tasks.push(index);
+      console.log(vm.tasks);
     }
     vm.removeTask = function(index) {
       vm.tasks.splice(index, 1);

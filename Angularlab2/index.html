@@ -19,12 +19,12 @@
       <input type="text" placeholder="Filter your to-dos" ng-model="taskFilter" id="filter">
       
       <ol>
-        <li ng-repeat="task in form.tasks | filter: taskFilter track by $index">{{ task }}<i class="material-icons md-18" ng-click="form.removeTask($index)">clear</i></li>
+        <li ng-repeat="task in form.tasks | filter: taskFilter track by $index" hover-task>{{ task }}<i class="material-icons md-18">clear</i></li>
       </ol>
 
-      <input type="text" placeholder="Add your to-do" ng-model="form.newInput" id="addInput">
+      <input type="text" placeholder="Add your to-do" ng-model="taskInput" id="addInput">
 
-      <button ng-click="form.addTask(form.newInput)" id="submit">Add</button>
+      <button ng-click="form.addTask(taskInput)" id="submit" hover-button>Add</button>
 
 
     </div>
@@ -33,5 +33,7 @@
   <script src="lib/angular.min.js"></script>
   <script src="scripts/module.js"></script>
   <script src="scripts/controller.js"></script>
+  <script src="scripts/hoverTask.js"></script>
+  <script src="scripts/hoverButton.js"></script>
 </body>
 </html>
