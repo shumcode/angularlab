@@ -3,10 +3,11 @@
     return {
       controller: "FormController as form",
       link: function ($scope, $element, $attrs) {
-        $element.on("mouseenter", function (index) {
+        $element.on("mouseenter", function () {
+          console.log('test')
           $element.css("background-color", "#ff1493");
         });
-        $element.on("mouseleave", function (index) {
+        $element.on("mouseleave", function () {
           $element.css("background-color", "#ff69b4");
         });
       }
